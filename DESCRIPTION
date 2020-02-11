@@ -1,14 +1,14 @@
 Package: tableschema.r
 Type: Package
-Title: 'Table Schema'
-Version: 1.1.0
-Date: 2018-09-25
-Author: c(person("Kleanthis", "Koupidis", email = "koupidis@okfn.gr", role = c("aut", "cre")), 
-            person("Lazaros", "Ioannidis", email = "larjohn@gmail.com", role = c("aut", "cre")),
-            person("Charalampos", "Bratsas", email = "charalampos.bratsas@okfn.org", role = "aut"),
-            person("Open Knowledge International", email = "charalampos.bratsas@okfn.org", role = "cph"))
+Title: Table Schema 'Frictionless Data'
+Version: 1.1.1
+Date: 2020-02-11
+Authors@R: c(person("Kleanthis", "Koupidis", email = "koupidis@okfn.gr", role = c("aut", "cre")), 
+            person("Lazaros", "Ioannidis", email = "larjohn@gmail.com", role = "aut"),
+            person("Charalampos", "Bratsas", email = "cbratsas@math.auth.gr", role = "aut"),
+            person("Open Knowledge International", email = "info@okfn.org", role = "cph"))
 Maintainer: Kleanthis Koupidis <koupidis@okfn.gr>
-Description: A library for working with 'Table Schema' (<http://specs.frictionlessdata.io/table-schema/>).
+Description: Allows to work with 'Table Schema' (<http://specs.frictionlessdata.io/table-schema/>). 'Table Schema' is well suited for use cases around handling and validating tabular data in text formats such as 'csv', but its utility extends well beyond this core usage, towards a range of applications where data benefits from a portable schema format. The 'tableschema.r' package can load and validate any table schema descriptor, allow the creation and modification of descriptors, expose methods for reading and streaming data that conforms to a 'Table Schema' via the 'Tabular Data Resource' abstraction.
 URL: https://github.com/frictionlessdata/tableschema-r
 BugReports: https://github.com/frictionlessdata/tableschema-r/issues
 License: MIT + file LICENSE
@@ -32,7 +32,6 @@ Suggests:
     covr,
     foreach,
     testthat
-Remotes: r-lib/covr
 Collate:
     'constraints.checkUnique.R'
     'constraints.checkRequired.R'
@@ -74,4 +73,4 @@ Collate:
     'tableschema.r.R'
     'validate.R'
     'writable.R'
-RoxygenNote: 6.1.0.9000
+RoxygenNote: 7.0.2

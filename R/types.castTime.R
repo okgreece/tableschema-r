@@ -14,8 +14,8 @@
 #' 
 #' @seealso \href{https://frictionlessdata.io/specs/table-schema/#time}{Types and formats specifications},
 #' \code{\link[base]{strptime}}, \code{\link[base]{DateTimeClasses}},
-#' \href{https://CRAN.R-project.org/package=parsedate}{parsedate} and
-#' \href{https://CRAN.R-project.org/package=lubridate}{lubridate} packages.
+#' \code{\link[parsedate]{parsedate-package}} and 
+#' \code{\link[lubridate]{lubridate-package}}.
 #' 
 #' @examples
 #' 
@@ -48,7 +48,7 @@ types.castTime <- function(format="%H:%M:%S", value) {
         #value = strftime(value, format = format)
           
       } else if ( format != "%H:%M:%S" & !startsWith(format,"fmt:") ) {
-        
+        format <- "%H:%M:%S"
         value <- format(value, format = format)
         
         value <- as.POSIXlt(value, format = format)
